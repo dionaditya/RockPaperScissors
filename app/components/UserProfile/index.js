@@ -1,0 +1,25 @@
+/**
+ *
+ * UserProfile
+ *
+ */
+
+import React from 'react';
+// import PropTypes from 'prop-types';
+// import styled from 'styled-components';
+
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+
+function UserProfile({userData}) {
+  return (
+    <div>
+      <img src={userData.photoURL} width="50px" height="50px" />
+      <div>{userData.displayName}</div>
+    </div>
+  );
+}
+
+UserProfile.propTypes = {};
+
+export default UserProfile;
