@@ -17,7 +17,7 @@ function LeaderBoardTable({ players, points }) {
 
   React.useEffect(() => {
       const fetchLeaderboard = async () => {
-      const res = await fetch('http://localhost:7777/leaderboard');
+      const res = await fetch('https://dionaditya-rockpaperscissorsserver.glitch.me/leaderboard');
       const result = await res.json();
       console.log(result)
       setLeaderBoard({
