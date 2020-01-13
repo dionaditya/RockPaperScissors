@@ -50,7 +50,7 @@ export function Leaderboard({ login, isLogin, userData, sync, signOut }) {
     const { value } = event.target;
     console.log(value);
 
-    const res = await fetch(`http://localhost:7777/play?userPick=${value}&id=${userData.uid}`);
+    const res = await fetch(`https://dionaditya-rockpaperscissorsserver.glitch.me/play?userPick=${value}&id=${userData.uid}`);
     const result = await res.json();
     setState({
       ...state,
@@ -74,7 +74,7 @@ export function Leaderboard({ login, isLogin, userData, sync, signOut }) {
     const data = {
       name: userData.displayName,
     }
-    const baseURL = `http://localhost:7777/start?id=${userData.uid}`
+    const baseURL = `https://dionaditya-rockpaperscissorsserver.glitch.me/start?id=${userData.uid}`
     const start = await fetch(baseURL, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
